@@ -15,6 +15,12 @@ import com.rarestardev.movie.tab_fragments.HomeFragment;
 import com.rarestardev.movie.tab_fragments.SearchFragment;
 import com.rarestardev.movie.tab_fragments.WatchlistFragment;
 
+/**
+ * this class for setup tabs on TabLayout with fragments.
+ *
+ * @author Rarestardev
+ * @version 1.0
+ */
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
 
@@ -26,11 +32,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        setupTabViewPagers();
+        SetupTabViewPagers();
 
     }
 
-    private void setupTabViewPagers() {
+    /**
+     * this method set tabs with fragment , setup title & icons tab.
+     * set default tab HomeFragments
+     */
+    private void SetupTabViewPagers() {
         binding.tabs.addTab(binding.tabs.newTab().setIcon(TabsIcon[0]).setText(TabsTitle[0]));
         binding.tabs.addTab(binding.tabs.newTab().setIcon(TabsIcon[1]).setText(TabsTitle[1]));
         binding.tabs.addTab(binding.tabs.newTab().setIcon(TabsIcon[2]).setText(TabsTitle[2]));
@@ -81,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    // Opens Fragments
+    // Default : HomeFragment()
     private void replaceFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_container, fragment);

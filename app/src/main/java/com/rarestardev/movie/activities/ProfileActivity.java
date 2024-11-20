@@ -17,6 +17,13 @@ import com.rarestardev.movie.utilities.Constants;
 import com.rarestardev.movie.utilities.SecurePreferences;
 import com.squareup.picasso.Picasso;
 
+/**
+ * This class for show user information.
+ * Setting app & sign out button.
+ * with GoogleApiClient.
+ *
+ * @author Rarestardev
+ */
 public class ProfileActivity extends AppCompatActivity {
 
     private ActivityProfileBinding binding;
@@ -60,7 +67,6 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void signOut(){
-
         Auth.GoogleSignInApi.signOut(gApiClient).setResultCallback(status -> {
             Log.d("ProfileActivity","Status : " + status.isSuccess());
             updateUI(status.isSuccess());
