@@ -38,7 +38,7 @@ public class LogoActivity extends AppCompatActivity {
         String username = securePreferences.getSecureString(this, Constants.SHARED_PREF_NAME,Constants.SHARED_PREF_KEY_USERNAME);
 
 
-        // logo activity handler with delayed 3000
+        // logo activity handler with delayed 3 second
         new Handler().postDelayed(() -> {
             if (username.isEmpty()){
 
