@@ -8,22 +8,52 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/base_app_color"
         tools:context=".activities.SignInActivity">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/poster"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_270sdp"
+            android:src="@drawable/sign_in_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="fitXY"/>
 
-        <com.google.android.gms.common.SignInButton
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@id/poster"
+            app:layout_constraintEnd_toEndOf="@id/poster"
+            app:layout_constraintTop_toTopOf="@id/poster"
+            app:layout_constraintBottom_toBottomOf="@id/poster"
+            android:textSize="@dimen/_28sdp"
+            android:textStyle="bold|italic"
+            />
+
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_sign_in"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_40sdp"
             app:buttonSize="wide"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/poster"
+            android:layout_marginTop="@dimen/_80sdp"
+            app:icon="@drawable/google_icon"
+            app:iconTintMode="multiply"
+            app:backgroundTint="#313237"
+            app:strokeWidth="0.5dp"
+            app:strokeColor="#0B1549"
+            android:text="@string/signIn"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:layout_marginEnd="30dp"
             android:layout_marginStart="30dp" />
 

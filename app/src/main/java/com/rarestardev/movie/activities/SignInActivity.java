@@ -20,10 +20,15 @@ import com.rarestardev.movie.databinding.ActivitySignInBinding;
 import com.rarestardev.movie.utilities.Constants;
 import com.rarestardev.movie.utilities.SecurePreferences;
 
+/**
+ * This class for sign in users in app with google sign in api.
+ *
+ *
+ * @author Rarestardev
+ */
 public class SignInActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
 
     private GoogleApiClient gApiClient;
-    private ActivitySignInBinding binding;
 
     private static final int RC_SIGN_IN = 101;
 
@@ -32,7 +37,7 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_in);
+        ActivitySignInBinding binding = DataBindingUtil.setContentView(this,R.layout.activity_sign_in);
 
         securePreferences = new SecurePreferences();
 
@@ -76,6 +81,12 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
         }
     }
 
+    /**
+     * this method for set google account on securePreferences.
+     * To avoid repeating the request, i saved it in securePreferences.
+     *
+     * @param inAccount get account information.
+     */
     private void SetDataOnPref(GoogleSignInAccount inAccount){
         if (inAccount == null){
             // clear pref account
@@ -97,6 +108,8 @@ public class SignInActivity extends AppCompatActivity implements GoogleApiClient
 
     }
 
+    // Because it is a demo program, i will only give a debug log for onConnectionFailed.
+    // this method implements gApiClient.
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
         Log.d("SignIn","ConnectionResult : " + connectionResult);

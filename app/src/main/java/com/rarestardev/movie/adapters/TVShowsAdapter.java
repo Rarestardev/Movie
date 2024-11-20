@@ -1,7 +1,5 @@
 package com.rarestardev.movie.adapters;
 
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -13,8 +11,6 @@ import com.rarestardev.movie.R;
 import com.rarestardev.movie.databinding.ItemContainerTvShowBinding;
 import com.rarestardev.movie.listener.TVShowsListener;
 import com.rarestardev.movie.model.TVShow;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
 
 import java.util.List;
 
@@ -44,27 +40,6 @@ public class TVShowsAdapter extends RecyclerView.Adapter<TVShowsAdapter.TVShowVi
     @Override
     public void onBindViewHolder(@NonNull TVShowViewHolder holder, int position) {
         holder.bindTVShow(tvShows.get(position));
-
-        Picasso.get().load(tvShows.get(position).getThumbnail()).into(new Target() {
-            @Override
-            public void onBitmapLoaded(Bitmap bitmap, Picasso.LoadedFrom from) {
-                holder.itemContainerTvShowBinding.imageTVShow.setImageBitmap(bitmap);
-                int x = 100;
-                int y = 10;
-                int color = bitmap.getPixel(x, y);
-                holder.itemContainerTvShowBinding.colorView.setCardBackgroundColor(color);
-            }
-
-            @Override
-            public void onBitmapFailed(Exception e, Drawable errorDrawable) {
-
-            }
-
-            @Override
-            public void onPrepareLoad(Drawable placeHolderDrawable) {
-
-            }
-        });
     }
 
     @Override

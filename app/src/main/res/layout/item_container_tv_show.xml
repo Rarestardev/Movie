@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
         <variable
@@ -28,23 +29,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="@id/textName" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/colorView"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/textName"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            app:cardCornerRadius="20dp"
-            />
-
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/imageTVShow"
             android:layout_width="@dimen/_70sdp"
             android:layout_height="@dimen/_100sdp"
             android:layout_marginStart="@dimen/_10sdp"
             android:scaleType="centerCrop"
+            android:imageURL="@{tvShow.thumbnail}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:riv_corner_radius="@dimen/_4sdp" />
@@ -54,14 +45,15 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_8sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_22sdp"
             android:layout_marginEnd="@dimen/_8sdp"
             android:includeFontPadding="false"
             android:paddingTop="@dimen/_8sdp"
             android:text="@{tvShow.name}"
             android:textColor="@color/white"
-            android:textSize="@dimen/_13ssp"
-            app:layout_constraintEnd_toStartOf="@id/colorView"
+            android:textStyle="bold"
+            android:textSize="@dimen/_15ssp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/imageTVShow"
             app:layout_constraintTop_toTopOf="@id/imageTVShow" />
 
@@ -72,8 +64,9 @@
             android:layout_marginTop="@dimen/_3sdp"
             android:includeFontPadding="false"
             android:text='@{tvShow.network + " (" + tvShow.country + ")"}'
-            android:textColor="@color/white"
-            android:textSize="@dimen/_12ssp"
+            android:textColor="#D5D2D2"
+            android:textSize="@dimen/_13ssp"
+            tools:text="@string/app_name"
             app:layout_constraintEnd_toEndOf="@id/textName"
             app:layout_constraintStart_toStartOf="@id/textName"
             app:layout_constraintTop_toBottomOf="@id/textName" />
@@ -83,7 +76,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_3sdp"
-            android:textColor="@color/white"
+            android:textColor="#AFADAD"
             android:textSize="@dimen/_12ssp"
             android:text='@{"Started on: " + tvShow.startDate}'
             app:layout_constraintEnd_toEndOf="@id/textName"
