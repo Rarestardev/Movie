@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="imageURL"
+            type="String" />
+    </data>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:contentDescription="@string/app_name"
+        android:imageURL="@{imageURL}"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="10dp"
+        android:layout_marginEnd="5dp"
+        />
+</layout>

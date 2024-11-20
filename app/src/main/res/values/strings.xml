@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Movie</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_tv_show">Search</string>
+    <string name="readMore">More</string>
+    <string name="line">…</string>
+    <string name="website">Website</string>
+    <string name="episode">Episode</string>
+    <string name="read_less">Less</string>
+    <string name="images">Images</string>
+    <string name="Watchlist">Watchlist</string>
+    <string name="noData">No Data!</string>
+    <string name="setting">Settings</string>
+    <string name="sign_out">Sign out</string>
+</resources>

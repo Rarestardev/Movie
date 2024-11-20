@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="Episode"
+            type="String" />
+
+        <variable
+            name="EpisodeName"
+            type="String" />
+
+        <variable
+            name="EpisodeAirDate"
+            type="String" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:padding="15dp"
+        android:id="@+id/rootLayout"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:background="@drawable/background_tv_show">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textEpisode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_toStartOf="@id/episodeImage"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/white"
+            tools:text="@string/episode"
+            android:maxLines="1"
+            android:text='@{"Episode :" + Episode}'
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="16sp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/holo_green_dark"
+            tools:text="@string/episode"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:layout_toStartOf="@id/textAirDate"
+            android:layout_marginEnd="10dp"
+            android:text="@={EpisodeName}"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/textEpisode"
+            android:layout_marginTop="15dp"
+            android:textSize="14sp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/episodeImage"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/baseline_play_circle_24"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textAirDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            tools:text="@string/episode"
+            android:maxLines="1"
+            android:text="@={EpisodeAirDate}"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/episodeImage"
+            android:layout_marginTop="10dp"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+</layout>

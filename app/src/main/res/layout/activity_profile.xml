@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="Username"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/base_app_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp"
+        tools:context=".activities.ProfileActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:id="@+id/imageBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@tools:sample/avatars"
+            app:riv_corner_radius="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:id="@+id/profileImageView"
+            android:scaleType="fitXY" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileImageView"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textStyle="bold"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:text="@={Username}"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@color/white" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_settings"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewUsername"
+            android:layout_marginTop="@dimen/_80sdp"
+            app:cornerRadius="@dimen/_8sdp"
+            android:text="@string/setting"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            app:strokeColor="@color/white"
+            app:strokeWidth="0.5dp"
+            app:backgroundTint="@color/secondColor"
+            app:rippleColor="@color/base_app_color"
+            android:textSize="@dimen/_14ssp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_sign_out"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_45sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_settings"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:cornerRadius="@dimen/_8sdp"
+            android:text="@string/sign_out"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            app:strokeColor="@color/white"
+            app:strokeWidth="0.5dp"
+            app:rippleColor="@color/base_app_color"
+            app:backgroundTint="@android:color/holo_red_light"
+            android:textSize="@dimen/_14ssp"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
