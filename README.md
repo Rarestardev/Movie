@@ -13,8 +13,6 @@ Welcome to the Movie project! This Android application allows users to browse, s
 
 ![Home Screen](https://github.com/Rarestardev/Movie/blob/master/home.jpg)
 ![Movie Details](https://github.com/Rarestardev/Movie/blob/master/movie_detail.jpg)
-![Movie Search](https://github.com/Rarestardev/Movie/blob/master/search.jpg)
-![Movie Watchlist](https://github.com/Rarestardev/Movie/blob/master/watchlist.jpg)
 
 ## Installation
 
