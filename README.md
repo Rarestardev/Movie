@@ -52,6 +52,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-## Contact
+## Connect with Me
 
-Project Link: [https://github.com/Rarestardev/Movie](https://github.com/Rarestardev/Movie)
+- [Instagram](https://www.instagram.com/rarestar.dev)
+- [Telegram](https://t.me/Rarestar_dev)
