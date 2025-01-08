@@ -11,8 +11,7 @@ Welcome to the Movie project! This Android application allows users to browse, s
 
 ## Screenshots
 
-![Home Screen](https://github.com/Rarestardev/Movie/blob/master/home.jpg)
-![Movie Details](https://github.com/Rarestardev/Movie/blob/master/movie_detail.jpg)
+<img src="movie_detail.jpg" width="150" /> <img src="home.jpg" width="150" /> <img src="search.jpg" width="150" /> <img src="watchlist.jpg" width="150" />
 
 ## Installation
 
